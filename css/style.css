@@ -311,6 +311,18 @@ p {
     align-items: center;
 }
 
+.logo a {
+    display: block;
+    line-height: 0;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
 .logo h1 {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -2802,6 +2814,11 @@ button:focus:not(:focus-visible) {
     
     .container {
         padding: 0 20px;
+    }
+    
+    .logo-img {
+        height: 45px;
+        max-width: 150px;
     }
     
     .top-bar {

@@ -1,0 +1,17 @@
+# WordPress backup files
+*.wpress
+
+# Large backup files
+*.backup
+*.zip
+*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~

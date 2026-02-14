@@ -210,174 +210,200 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             console.log('▶️ Processing form submission...');
-        
-        // Get form values
-        const tripType = document.getElementById('tripType').value;
-        const pickupLocation = document.getElementById('pickupLocation').value;
-        const dropLocation = document.getElementById('dropLocation').value;
-        const pickupDate = document.getElementById('pickupDate').value;
-        const pickupTime = document.getElementById('pickupTime').value;
-        const carType = document.getElementById('carType').value;
-        const mobileNumber = document.getElementById('mobileNumber').value;
-        const returnDate = document.getElementById('returnDate') ? document.getElementById('returnDate').value : '';
-        
-        // Get trip type text for display
-        const tripTypeText = document.getElementById('tripType').options[document.getElementById('tripType').selectedIndex].text;
-        const carTypeText = document.getElementById('carType').options[document.getElementById('carType').selectedIndex].text;
-        
-        // Validate mobile number
-        if (!mobileNumber.match(/^[0-9]{10}$/)) {
-            alert('❌ Please enter a valid 10-digit mobile number');
-            return;
-        }
-        
-        // Validate required fields
-        if (!tripType || !pickupLocation || !pickupDate || !pickupTime || !carType) {
-            alert('❌ Please fill all required fields');
-            return;
-        }
-        
-        // Map trip type values to Google Form format (must match exactly)
-        const tripTypeMapping = {
-            'oneway': 'One Way Trip',
-            'roundtrip': 'Round Trip',
-            'local': 'Local Rental(hours)',
-            'airport': 'Airport Transfer'
-        };
-        
-        // Map car type values to Google Form format
-        const carTypeMapping = {
-            'sedan': 'Sedan',
-            'ertiga': 'MUV',
-            'innova': 'SUV',
-            'luxury': 'Luxury'
-        };
-        
-        // Show loading state
-        const submitButton = bookingForm.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.innerHTML;
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
-        submitButton.disabled = true;
-        isSubmitting = true;
-        
-        // Google Form URL
-        const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdUoXyun_N1BYtlAD2HZyGX2tLtTO0LIaayOEqWq3GgqoCAnQ/formResponse';
-        
-        // Create a temporary form for submission
-        const tempForm = document.createElement('form');
-        tempForm.action = googleFormURL;
-        tempForm.method = 'POST';
-        tempForm.target = 'hidden_iframe';
-        tempForm.style.display = 'none';
-        
-        // Add form fields
-        const fields = [
-            { name: 'entry.219265158', value: tripTypeMapping[tripType] || tripTypeText },
-            { name: 'entry.1594636824', value: pickupDate },
-            { name: 'entry.1069431231', value: pickupLocation },
-            { name: 'entry.1297259824', value: dropLocation },
-            { name: 'entry.2064504236', value: pickupTime },
-            { name: 'entry.1057979598', value: mobileNumber },
-            { name: 'entry.681528332', value: carTypeMapping[carType] || carType }
-        ];
-        
-        // DEBUG: Log all data being submitted
-        console.log('==========================================');
-        console.log('GOOGLE FORM SUBMISSION DEBUG');
-        console.log('==========================================');
-        console.log('Form URL:', googleFormURL);
-        console.log('Submission Data:');
-        fields.forEach(field => {
-            console.log(`  ${field.name} = "${field.value}"`);
-        });
-        console.log('==========================================');
-        
-        // Show alert with submission data for verification
-        const debugInfo = fields.map(f => `${f.name}: ${f.value}`).join('\n');
-        console.log('Full Debug Info:\n', debugInfo);
-        
-        fields.forEach(field => {
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = field.name;
-            input.value = field.value;
-            tempForm.appendChild(input);
-        });
-        
-        document.body.appendChild(tempForm);
-        
-        // Set up iframe load handler BEFORE submitting
-        hiddenIframe.onload = function() {
-            // Only trigger if we're actually submitting
-            if (isSubmitting) {
-                clearTimeout(submissionTimeout);
-                
-                // Show success popup
-                alert('✅ SUCCESS!\n\nYour booking has been submitted successfully!\nWe will contact you soon on: ' + mobileNumber);
-                
-                // Update button state
-                submitButton.innerHTML = '<i class="fas fa-check-circle"></i> Booking Submitted!';
-                submitButton.style.backgroundColor = '#28a745';
-                
-                // Show success message div
-                const successMessage = document.getElementById('bookingSuccessMessage');
-                if (successMessage) {
-                    successMessage.style.display = 'block';
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-                
-                // Create booking summary for WhatsApp
-                let message = `🚖 NEW BOOKING\n\n`;
-                message += `Trip: ${tripTypeText}\n`;
-                message += `From: ${pickupLocation}\n`;
-                if (tripType !== 'local') {
-                    message += `To: ${dropLocation}\n`;
-                }
-                message += `Date: ${pickupDate} at ${pickupTime}\n`;
-                if (tripType === 'roundtrip' && returnDate) {
-                    message += `Return: ${returnDate}\n`;
-                }
-                message += `Vehicle: ${carTypeText}\n`;
-                message += `Mobile: ${mobileNumber}\n\n`;
-                message += `Please confirm availability.`;
-                
-                // Ask for WhatsApp confirmation
-                setTimeout(() => {
-                    const sendWhatsApp = confirm('Would you like to send a confirmation message via WhatsApp?\n\n(This will help us process your booking faster)');
+            
+            // Get form values
+            const tripType = document.getElementById('tripType').value;
+            const pickupLocation = document.getElementById('pickupLocation').value;
+            const dropLocation = document.getElementById('dropLocation').value;
+            const pickupDate = document.getElementById('pickupDate').value;
+            const pickupTime = document.getElementById('pickupTime').value;
+            const carType = document.getElementById('carType').value;
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const returnDate = document.getElementById('returnDate') ? document.getElementById('returnDate').value : '';
+            
+            // Get trip type text for display
+            const tripTypeText = document.getElementById('tripType').options[document.getElementById('tripType').selectedIndex].text;
+            const carTypeText = document.getElementById('carType').options[document.getElementById('carType').selectedIndex].text;
+            
+            // Validate mobile number
+            if (!mobileNumber.match(/^[0-9]{10}$/)) {
+                alert('❌ Please enter a valid 10-digit mobile number');
+                return;
+            }
+            
+            // Validate required fields
+            if (!tripType || !pickupLocation || !pickupDate || !pickupTime || !carType) {
+                alert('❌ Please fill all required fields');
+                return;
+            }
+            
+            // Map trip type values to Google Form format (must match exactly)
+            const tripTypeMapping = {
+                'oneway': 'One Way Trip',
+                'roundtrip': 'Round Trip',
+                'local': 'Local Rental(hours)',
+                'airport': 'Airport Transfer'
+            };
+            
+            // Map car type values to Google Form format
+            const carTypeMapping = {
+                'sedan': 'Sedan',
+                'ertiga': 'MUV',
+                'innova': 'SUV',
+                'luxury': 'Luxury'
+            };
+            
+            // Show loading state
+            const submitButton = bookingForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            submitButton.disabled = true;
+            isSubmitting = true;
+            
+            // Google Form URL
+            const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdUoXyun_N1BYtlAD2HZyGX2tLtTO0LIaayOEqWq3GgqoCAnQ/formResponse';
+            
+            // Create a temporary form for submission
+            const tempForm = document.createElement('form');
+            tempForm.action = googleFormURL;
+            tempForm.method = 'POST';
+            tempForm.target = 'hidden_iframe';
+            tempForm.style.display = 'none';
+            
+            // Add form fields
+            const fields = [
+                { name: 'entry.219265158', value: tripTypeMapping[tripType] || tripTypeText },
+                { name: 'entry.1594636824', value: pickupDate },
+                { name: 'entry.1069431231', value: pickupLocation },
+                { name: 'entry.1297259824', value: dropLocation },
+                { name: 'entry.2064504236', value: pickupTime },
+                { name: 'entry.1057979598', value: mobileNumber },
+                { name: 'entry.681528332', value: carTypeMapping[carType] || carType }
+            ];
+            
+            // DEBUG: Log all data being submitted
+            console.log('==========================================');
+            console.log('GOOGLE FORM SUBMISSION DEBUG');
+            console.log('==========================================');
+            console.log('Form URL:', googleFormURL);
+            console.log('Submission Data:');
+            fields.forEach(field => {
+                console.log(`  ${field.name} = "${field.value}"`);
+            });
+            console.log('==========================================');
+            
+            // Show alert with submission data for verification
+            const debugInfo = fields.map(f => `${f.name}: ${f.value}`).join('\n');
+            console.log('Full Debug Info:\n', debugInfo);
+            
+            fields.forEach(field => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = field.name;
+                input.value = field.value;
+                tempForm.appendChild(input);
+            });
+            
+            document.body.appendChild(tempForm);
+            
+            // Set up iframe load handler BEFORE submitting
+            hiddenIframe.onload = function() {
+                // Only trigger if we're actually submitting
+                if (isSubmitting) {
+                    clearTimeout(submissionTimeout);
                     
-                    if (sendWhatsApp) {
-                        const phoneNumber = '917488341848';
-                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                        window.open(whatsappUrl, '_blank');
+                    // Show success popup
+                    alert('✅ SUCCESS!\n\nYour booking has been submitted successfully!\nWe will contact you soon on: ' + mobileNumber);
+                    
+                    // Update button state
+                    submitButton.innerHTML = '<i class="fas fa-check-circle"></i> Booking Submitted!';
+                    submitButton.style.backgroundColor = '#28a745';
+                    
+                    // Show success message div
+                    const successMessage = document.getElementById('bookingSuccessMessage');
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                     }
                     
-                    // Reset form after 2 seconds
+                    // Create booking summary for WhatsApp
+                    let message = `🚖 NEW BOOKING\n\n`;
+                    message += `Trip: ${tripTypeText}\n`;
+                    message += `From: ${pickupLocation}\n`;
+                    if (tripType !== 'local') {
+                        message += `To: ${dropLocation}\n`;
+                    }
+                    message += `Date: ${pickupDate} at ${pickupTime}\n`;
+                    if (tripType === 'roundtrip' && returnDate) {
+                        message += `Return: ${returnDate}\n`;
+                    }
+                    message += `Vehicle: ${carTypeText}\n`;
+                    message += `Mobile: ${mobileNumber}\n\n`;
+                    message += `Please confirm availability.`;
+                    
+                    // Ask for WhatsApp confirmation
                     setTimeout(() => {
-                        bookingForm.reset();
+                        const sendWhatsApp = confirm('Would you like to send a confirmation message via WhatsApp?\n\n(This will help us process your booking faster)');
+                        
+                        if (sendWhatsApp) {
+                            const phoneNumber = '917488341848';
+                            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                            window.open(whatsappUrl, '_blank');
+                        }
+                        
+                        // Reset form after 2 seconds
+                        setTimeout(() => {
+                            bookingForm.reset();
+                            submitButton.innerHTML = originalButtonText;
+                            submitButton.style.backgroundColor = '';
+                            submitButton.disabled = false;
+                            isSubmitting = false;
+                            if (successMessage) {
+                                successMessage.style.display = 'none';
+                            }
+                            // Remove temp form
+                            if (tempForm.parentNode) {
+                                tempForm.parentNode.removeChild(tempForm);
+                            }
+                        }, 2000);
+                    }, 1000);
+                }
+            };
+            
+            // Set timeout for error detection (10 seconds - increased from 5)
+            submissionTimeout = setTimeout(() => {
+                if (isSubmitting) {
+                    // Show error popup
+                    alert('❌ SUBMISSION FAILED!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
+                    
+                    // Update button state
+                    submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed - Try Again';
+                    submitButton.style.backgroundColor = '#dc3545';
+                    
+                    setTimeout(() => {
                         submitButton.innerHTML = originalButtonText;
                         submitButton.style.backgroundColor = '';
                         submitButton.disabled = false;
                         isSubmitting = false;
-                        if (successMessage) {
-                            successMessage.style.display = 'none';
-                        }
                         // Remove temp form
                         if (tempForm.parentNode) {
                             tempForm.parentNode.removeChild(tempForm);
                         }
-                    }, 2000);
-                }, 1000);
-            }
-        };
-        
-        // Set timeout for error detection (10 seconds - increased from 5)
-        submissionTimeout = setTimeout(() => {
-            if (isSubmitting) {
-                // Show error popup
-                alert('❌ SUBMISSION FAILED!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
+                    }, 3000);
+                }
+            }, 10000);
+            
+            // Submit the form
+            console.log('Submitting form to Google...');
+            try {
+                tempForm.submit();
+                console.log('Form submitted! Waiting for response...');
+            } catch (error) {
+                console.error('Form submission error:', error);
+                clearTimeout(submissionTimeout);
+                alert('❌ SUBMISSION ERROR!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
                 
-                // Update button state
-                submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed - Try Again';
+                submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error - Try Again';
                 submitButton.style.backgroundColor = '#dc3545';
                 
                 setTimeout(() => {
@@ -385,40 +411,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitButton.style.backgroundColor = '';
                     submitButton.disabled = false;
                     isSubmitting = false;
-                    // Remove temp form
                     if (tempForm.parentNode) {
                         tempForm.parentNode.removeChild(tempForm);
                     }
                 }, 3000);
             }
-        }, 10000);
-        
-        // Submit the form
-        console.log('Submitting form to Google...');
-        try {
-            tempForm.submit();
-            console.log('Form submitted! Waiting for response...');
-        } catch (error) {
-            console.error('Form submission error:', error);
-            clearTimeout(submissionTimeout);
-            alert('❌ SUBMISSION ERROR!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
             
-            submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error - Try Again';
-            submitButton.style.backgroundColor = '#dc3545';
-            
-            setTimeout(() => {
-                submitButton.innerHTML = originalButtonText;
-                submitButton.style.backgroundColor = '';
-                submitButton.disabled = false;
-                isSubmitting = false;
-                if (tempForm.parentNode) {
-                    tempForm.parentNode.removeChild(tempForm);
-                }
-            }, 3000);
-        }
-        
-        return false; // Prevent form submission
-    });
+            return false; // Prevent form submission
+        });
     } else {
         console.error('❌ Booking form not found!');
     }

@@ -175,27 +175,41 @@ if (tripTypeSelect) {
 // =====================================
 // Booking Form Submission - Google Form Integration with Hidden Iframe
 // =====================================
-const bookingForm = document.getElementById('bookingForm');
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔧 Booking form script initializing...');
+    
+    const bookingForm = document.getElementById('bookingForm');
+    console.log('📋 Booking form found:', bookingForm ? 'YES' : 'NO');
 
-if (bookingForm) {
-    // Create hidden iframe for form submission (avoids CORS issues)
-    let hiddenIframe = document.getElementById('hidden_iframe');
-    if (!hiddenIframe) {
-        hiddenIframe = document.createElement('iframe');
-        hiddenIframe.name = 'hidden_iframe';
-        hiddenIframe.id = 'hidden_iframe';
-        hiddenIframe.style.display = 'none';
-        document.body.appendChild(hiddenIframe);
-    }
-    
-    // Track submission status
-    let submissionTimeout = null;
-    let isSubmitting = false;
-    
-    bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    if (bookingForm) {
+        console.log('✅ Booking form handler attached');
         
-        if (isSubmitting) return; // Prevent double submissions
+        // Create hidden iframe for form submission (avoids CORS issues)
+        let hiddenIframe = document.getElementById('hidden_iframe');
+        if (!hiddenIframe) {
+            hiddenIframe = document.createElement('iframe');
+            hiddenIframe.name = 'hidden_iframe';
+            hiddenIframe.id = 'hidden_iframe';
+            hiddenIframe.style.display = 'none';
+            document.body.appendChild(hiddenIframe);
+            console.log('📦 Hidden iframe created');
+        }
+        
+        // Track submission status
+        let submissionTimeout = null;
+        let isSubmitting = false;
+        
+        bookingForm.addEventListener('submit', (e) => {
+            console.log('🚀 Form submit event triggered');
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (isSubmitting) {
+                console.log('⚠️ Already submitting, ignoring...');
+                return false;
+            }
+            
+            console.log('▶️ Processing form submission...');
         
         // Get form values
         const tripType = document.getElementById('tripType').value;
@@ -402,8 +416,13 @@ if (bookingForm) {
                 }
             }, 3000);
         }
+        
+        return false; // Prevent form submission
     });
-}
+    } else {
+        console.error('❌ Booking form not found!');
+    }
+});
 
 // =====================================
 // Contact Form Submission

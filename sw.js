@@ -1,7 +1,11 @@
 // Service Worker for Car Rental Ranchi
-// Version 1.1.0 - Progressive Web App - Updated February 14, 2026
+// Version 1.2.0 - Progressive Web App - Optimized February 14, 2026
 
-const CACHE_NAME = 'car-rental-ranchi-v2';
+const CACHE_NAME = 'car-rental-ranchi-v3';
+const STATIC_CACHE = 'static-v3';
+const DYNAMIC_CACHE = 'dynamic-v3';
+const IMAGE_CACHE = 'images-v3';
+
 const urlsToCache = [
     '/',
     '/index.html',
@@ -9,13 +13,14 @@ const urlsToCache = [
     '/css/enhanced-3d.css',
     '/js/script.js',
     '/js/enhanced-3d.js',
-    '/favicon.svg'
+    '/favicon.svg',
+    '/offline.html'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
+        caches.open(STATIC_CACHE)
             .then((cache) => {
                 console.log('Opened cache');
                 return cache.addAll(urlsToCache);
@@ -26,42 +31,53 @@ self.addEventListener('install', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+    const { request } = event;
+    const url = new URL(request.url);
+    
+    // Handle images separately with longer cache
+    if (request.destination === 'image') {
+        event.respondWith(
+            caches.match(request).then((cachedResponse) => {
+                return cachedResponse || fetch(request).then((response) => {
+                    return caches.open(IMAGE_CACHE).then((cache) => {
+                        cache.put(request, response.clone());
+                        return response;
+                    });
+                });
+            }).catch(() => caches.match('/offline.html'))
+        );
+        return;
+    }
+    
+    // Network first for API calls and forms
+    if (request.method !== 'GET' || url.pathname.includes('/api/')) {
+        event.respondWith(
+            fetch(request).catch(() => caches.match('/offline.html'))
+        );
+        return;
+    }
+    
+    // Cache first for static resources
     event.respondWith(
-        caches.match(event.request)
-            .then((response) => {
-                // Cache hit - return response
-                if (response) {
+        caches.match(request).then((cachedResponse) => {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            
+            return fetch(request).then((response) => {
+                if (!response || response.status !== 200 || response.type !== 'basic') {
                     return response;
                 }
                 
-                // Clone the request
-                const fetchRequest = event.request.clone();
-                
-                return fetch(fetchRequest).then((response) => {
-                    // Check if valid response
-                    if (!response || response.status !== 200 || response.type !== 'basic') {
-                        return response;
-                    }
-                    
-                    // Clone the response
-                    const responseToCache = response.clone();
-                    
-                    // Cache successful GET requests
-                    if (event.request.method === 'GET') {
-                        caches.open(CACHE_NAME)
-                            .then((cache) => {
-                                cache.put(event.request, responseToCache);
-                            });
-                    }
-                    
-                    return response;
-                });
-            })
-            .catch(() => {
-                // Return offline page if available
-                return caches.match('/offline.html');
-            })
-    );
+                const responseToCache = response.clone();
+                caches.open(DYNAMIC_CACHE).then((cache) => {
+                    cache.puSTATIC_CACHE, DYNAMIC_CACHE, IMAGE_CACHE];
+    
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (!cacheWhitelist.includes(cacheName)
 });
 
 // Activate event - clean up old caches

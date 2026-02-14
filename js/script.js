@@ -824,54 +824,77 @@ const autoFillForms = () => {
 setTimeout(autoFillForms, 500);
 
 // =====================================
-// Instant Fare Calculator
+// Instant Fare Calculator - KM Based
 // =====================================
 const calcBtn = document.getElementById('calcBtn');
 const fareResult = document.getElementById('fareResult');
 const fareAmount = document.getElementById('fareAmount');
+const fareDetails = document.getElementById('fareDetails');
 
 if (calcBtn) {
     calcBtn.addEventListener('click', function() {
-        const from = document.getElementById('calcFrom').value;
-        const to = document.getElementById('calcTo').value;
+        const kmInput = document.getElementById('calcKm');
         const carRate = document.getElementById('calcCar').value;
         
-        if (!from || !to) {
-            alert('Please select both pickup and drop locations');
+        if (!kmInput || !kmInput.value) {
+            alert('⚠️ Please enter distance in kilometers');
+            kmInput.focus();
             return;
         }
         
-        // Distance mapping (in km)
-        const distances = {
-            'ranchi-jamshedpur': 130,
-            'ranchi-patna': 330,
-            'ranchi-kolkata': 420,
-            'ranchi-bokaro': 110,
-            'airport-jamshedpur': 135,
-            'airport-patna': 335,
-            'airport-kolkata': 425,
-            'airport-bokaro': 115,
-            'railway-jamshedpur': 132,
-            'railway-patna': 328,
-            'railway-kolkata': 418,
-            'railway-bokaro': 108
-        };
+        const km = parseFloat(kmInput.value);
         
-        const routeKey = `${from}-${to}`;
-        const distance = distances[routeKey] || 100;
-        const rate = parseInt(carRate);
+        // Validation
+        if (km <= 0) {
+            alert('⚠️ Please enter a valid distance (greater than 0 km)');
+            kmInput.focus();
+            return;
+        }
         
-        // Calculate fare: (distance * rate) + driver allowance
-        const driverAllowance = Math.ceil(distance / 300) * 300; // ₹300 per day
-        const totalFare = (distance * rate) + driverAllowance;
+        if (km > 1000) {
+            alert('⚠️ Maximum distance is 1000 km. For longer trips, please contact us directly.');
+            kmInput.focus();
+            return;
+        }
+        
+        const rate = parseFloat(carRate);
+        
+        // Simple calculation: KM × Rate
+        const totalFare = km * rate;
+        
+        // Get vehicle name for display
+        const carSelect = document.getElementById('calcCar');
+        const carName = carSelect.options[carSelect.selectedIndex].text;
         
         // Display result with animation
-        fareAmount.textContent = `₹${totalFare.toLocaleString()}`;
+        fareAmount.textContent = `₹${Math.round(totalFare).toLocaleString()}`;
+        
+        // Show calculation breakdown
+        if (fareDetails) {
+            fareDetails.innerHTML = `
+                <strong>Calculation:</strong> ${km} km × ₹${rate}/km = ₹${Math.round(totalFare).toLocaleString()}<br>
+                <strong>Vehicle:</strong> ${carName}
+            `;
+        }
+        
         fareResult.style.display = 'block';
         
         // Smooth scroll to result
         fareResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        
+        // Log for debugging
+        console.log(`Fare Calculated: ${km} km × ₹${rate}/km = ₹${Math.round(totalFare)}`);
     });
+    
+    // Allow Enter key to calculate
+    const kmInput = document.getElementById('calcKm');
+    if (kmInput) {
+        kmInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calcBtn.click();
+            }
+        });
+    }
 }
 
 // =====================================

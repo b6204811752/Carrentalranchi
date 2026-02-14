@@ -558,32 +558,21 @@
                 </div>
                 <div class="calculator-form">
                     <div class="calc-row">
-                        <select id="calcFrom" class="calc-input">
-                            <option value="">From</option>
-                            <option value="ranchi">Ranchi City</option>
-                            <option value="airport">Birsa Munda Airport</option>
-                            <option value="railway">Ranchi Railway Station</option>
-                        </select>
-                        <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-                        <select id="calcTo" class="calc-input">
-                            <option value="">To</option>
-                            <option value="jamshedpur">Jamshedpur</option>
-                            <option value="patna">Patna</option>
-                            <option value="kolkata">Kolkata</option>
-                            <option value="bokaro">Bokaro</option>
-                        </select>
+                        <input type="number" id="calcKm" class="calc-input" placeholder="Enter Distance (KM)" min="1" max="1000" step="1" required>
                         <select id="calcCar" class="calc-input">
                             <option value="12">Sedan (₹12/km)</option>
                             <option value="14">Ertiga (₹14/km)</option>
                             <option value="18">Innova (₹18/km)</option>
+                            <option value="50">Luxury (₹50/km)</option>
                         </select>
-                        <button id="calcBtn" class="calc-button"><i class="fas fa-search"></i> Calculate</button>
+                        <button id="calcBtn" class="calc-button"><i class="fas fa-calculator"></i> Calculate Fare</button>
                     </div>
                     <div id="fareResult" class="fare-result" style="display: none;">
                         <div class="result-box">
                             <div class="result-label">Estimated Fare:</div>
                             <div class="result-amount" id="fareAmount">₹0</div>
-                            <div class="result-note">*Inclusive of driver allowance, excludes toll & parking</div>
+                            <div class="result-details" id="fareDetails" style="margin: 10px 0; font-size: 14px; color: #666;"></div>
+                            <div class="result-note">*Base fare only, excludes toll & parking charges</div>
                             <button class="book-now-calc" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book This Trip</button>
                         </div>
                     </div>

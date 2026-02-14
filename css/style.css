@@ -2733,11 +2733,21 @@ button:focus:not(:focus-visible) {
     }
     
     .top-bar {
+        padding: 8px 0;
+        font-size: 0.75rem;
+    }
+    
+    .top-info {
+        gap: 10px;
+    }
+    
+    .top-info span:nth-child(2),
+    .top-info span:nth-child(3) {
         display: none;
     }
     
     .header {
-        top: 0;
+        top: 36px;
         padding: 12px 0;
     }
     

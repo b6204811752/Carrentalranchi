@@ -192,11 +192,14 @@ p {
 }
 
 .btn-call {
-    background: var(--primary-color);
+    background: #FF6B35;
     color: var(--white);
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 0.9rem;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-call:hover {
+    background: #e85a28;
+    transform: translateY(-2px);
 }
 
 .btn-call:hover {

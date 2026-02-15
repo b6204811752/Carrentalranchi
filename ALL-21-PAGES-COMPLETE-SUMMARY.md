@@ -242,7 +242,7 @@
 1. **TaxiService Schema:**
    - Provider: Car Rental Ranchi
    - Phone: +91-7488341848
-   - Email: Carrentalranchi01@gmail.com
+   - Email: carrentalranchi02@gmail.com
    - Price range for each route
    - Area served (city and state)
 
@@ -653,7 +653,7 @@ The user's original request was to "improve this section Taxi Service Coverage -
 ---
 
 **Car Rental Ranchi - Now Serving 21 Routes with Perfect SEO & User Experience**
-**Contact: +91-7488341848 | Email: Carrentalranchi01@gmail.com**
+**Contact: +91-7488341848 | Email: carrentalranchi02@gmail.com**
 
 ---
 

@@ -391,7 +391,7 @@ For each city page, add these images (free from Unsplash/Pexels):
 
 All pages include:
 - **Phone:** +91-7488341848
-- **Email:** Carrentalranchi01@gmail.com
+- **Email:** carrentalranchi02@gmail.com
 - **WhatsApp:** Pre-filled booking messages
 - **Location:** Ranchi, Jharkhand
 

@@ -1,27 +1,66 @@
-# User-agent: *
-# Allow all robots to index the site
+# Robots.txt for Car Rental Ranchi
+# www.carrentalranchi.com
 
+# Allow all search engines
 User-agent: *
 Allow: /
+Allow: /*.html$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /images/
 
-# Disallow admin and private directories (if any)
+# Disallow admin and private directories
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
+Disallow: /test-*
 
 # Disallow template and documentation files
 Disallow: /ENHANCED-HTML-TEMPLATE.html
 Disallow: /*.md$
+Disallow: /*-GUIDE.md$
+Disallow: /*-SUMMARY.md$
+Disallow: /*-STATUS.md$
+Disallow: /test-booking.html
+Disallow: /test-form.html
 
-# Allow Google bots specifically
+# Allow specific important bots
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Disallow bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 # Sitemap location
 Sitemap: https://www.carrentalranchi.com/sitemap.xml
+Sitemap: https://carrentalranchi.com/sitemap.xml
 
-# Crawl-delay for respectful crawling
+# Crawl-delay for respectful crawling (general)
 Crawl-delay: 1

@@ -167,7 +167,7 @@ Your website is **100% production-ready** with all competitive features implemen
 
 1. **Update Contact Information** (if needed)
    - Current: +917488341848
-   - Current: Carrentalranchi01@gmail.com
+   - Current: carrentalranchi02@gmail.com
    - Edit [index.html](index.html) if you want to change these
 
 2. **Add Google Analytics**
@@ -401,7 +401,7 @@ Your website has **EVERYTHING needed to rank #1** on Google:
 ## 📞 QUICK REFERENCE
 
 **Contact**: +917488341848  
-**Email**: Carrentalranchi01@gmail.com  
+**Email**: carrentalranchi02@gmail.com  
 **Website** (to be): www.carrentalranchi.com  
 
 **Popular Routes**:

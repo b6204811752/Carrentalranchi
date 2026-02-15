@@ -406,7 +406,7 @@ Track these events:
 For any questions about SEO implementation or website optimization:
 
 **Contact:** +917488341848  
-**Email:** Carrentalranchi01@gmail.com  
+**Email:** carrentalranchi02@gmail.com  
 
 ---
 

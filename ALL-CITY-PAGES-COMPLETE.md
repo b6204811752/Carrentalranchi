@@ -389,7 +389,7 @@ Add these 9 entries to your `sitemap.xml`:
 ## 📞 CONTACT INFO IN ALL PAGES
 
 - Phone: +91-7488341848
-- Email: Carrentalranchi01@gmail.com
+- Email: carrentalranchi02@gmail.com
 - WhatsApp: Pre-filled booking messages
 - Location: Ranchi, Jharkhand
 

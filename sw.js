@@ -1,11 +1,10 @@
 // Service Worker for Car Rental Ranchi
-// Version 3.0.0 - Performance Cleanup - February 17, 2026
-// Simplified caching - removed extra CSS/JS files
+// Version 4.0.0 - Network-first for all resources - February 17, 2026
 
-const CACHE_NAME = 'car-rental-ranchi-v10';
-const STATIC_CACHE = 'static-v10';
-const DYNAMIC_CACHE = 'dynamic-v10';
-const IMAGE_CACHE = 'images-v10';
+const CACHE_NAME = 'car-rental-ranchi-v11';
+const STATIC_CACHE = 'static-v11';
+const DYNAMIC_CACHE = 'dynamic-v11';
+const IMAGE_CACHE = 'images-v11';
 
 const urlsToCache = [
     '/',
@@ -76,38 +75,33 @@ self.addEventListener('fetch', (event) => {
         return;
     }
     
-    // Cache first for static resources (CSS, JS, fonts, etc.)
+    // Network first for CSS/JS/fonts to always get latest updates
     event.respondWith(
-        caches.match(request).then((cachedResponse) => {
-            if (cachedResponse) {
-                return cachedResponse;
-            }
-            
-            return fetch(request).then((response) => {
-                if (!response || response.status !== 200 || response.type !== 'basic') {
-                    return response;
-                }
-                
+        fetch(request).then((response) => {
+            if (response && response.status === 200) {
                 const responseToCache = response.clone();
                 caches.open(DYNAMIC_CACHE).then((cache) => {
                     cache.put(request, responseToCache);
                 });
-                
-                return response;
-            }).catch(() => caches.match('/offline.html'));
+            }
+            return response;
+        }).catch(() => {
+            // Fallback to cache if network fails
+            return caches.match(request).then((cachedResponse) => {
+                return cachedResponse || caches.match('/offline.html');
+            });
         })
     );
 });
 
-// Activate event - clean up old caches
+// Activate event - WIPE ALL old caches to force fresh content
 self.addEventListener('activate', (event) => {
-    const cacheWhitelist = [STATIC_CACHE, DYNAMIC_CACHE, IMAGE_CACHE];
-    
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map((cacheName) => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                    // Delete ALL old caches that don't match current version
+                    if (!cacheName.includes('-v11')) {
                         console.log('Deleting old cache:', cacheName);
                         return caches.delete(cacheName);
                     }

@@ -511,12 +511,12 @@ const scrollTopBtn = document.getElementById('scrollTop');
 
 if (scrollTopBtn) {
     const handleScrollTop = throttle(() => {
-        if (window.pageYOffset > 100) {
+        if (window.pageYOffset > 50) {
             scrollTopBtn.classList.add('show');
         } else {
             scrollTopBtn.classList.remove('show');
         }
-    }, 200);
+    }, 100);
 
     window.addEventListener('scroll', handleScrollTop, { passive: true });
     

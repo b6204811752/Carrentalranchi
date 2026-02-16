@@ -2202,11 +2202,11 @@ footer {
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
-    z-index: 10004;
+    z-index: 100001 !important;
     will-change: opacity, visibility, transform;
     display: flex !important;
     align-items: center;
@@ -2215,14 +2215,15 @@ footer {
 }
 
 .scroll-top.show {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
     pointer-events: auto;
 }
 
 .scroll-top:hover {
     background: #ff8c61;
     transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 107, 53, 0.6);
 }
 
 /* =====================================
@@ -3420,7 +3421,7 @@ button:focus:not(:focus-visible) {
         height: 50px;
         font-size: 1.3rem;
         box-sizing: border-box;
-        z-index: 10004 !important;
+        z-index: 100001 !important;
     }
     
     .live-chat-indicator {
@@ -6615,7 +6616,7 @@ button:focus:not(:focus-visible) {
         right: auto !important;
         bottom: 15px !important;
         box-sizing: border-box !important;
-        z-index: 10004 !important;
+        z-index: 100001 !important;
         width: 50px !important;
         height: 50px !important;
     }

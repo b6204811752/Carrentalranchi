@@ -511,7 +511,7 @@ const scrollTopBtn = document.getElementById('scrollTop');
 
 if (scrollTopBtn) {
     const handleScrollTop = throttle(() => {
-        if (window.pageYOffset > 10) {
+        if (window.pageYOffset > 300) {
             scrollTopBtn.classList.add('show');
         } else {
             scrollTopBtn.classList.remove('show');

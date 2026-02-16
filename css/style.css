@@ -2221,39 +2221,50 @@ footer {
    Scroll to Top Button
    ===================================== */
 .scroll-top {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    width: 50px;
-    height: 50px;
-    background: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 30px !important;
+    width: 56px !important;
+    height: 56px !important;
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    font-size: 1.6rem !important;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.8), 0 0 0 4px rgba(255, 107, 53, 0.2) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
     z-index: 100001 !important;
-    will-change: opacity, visibility, transform;
+    will-change: opacity, visibility, transform !important;
     display: flex !important;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: none !important;
+    animation: buttonPulse 2s ease-in-out infinite !important;
 }
 
 .scroll-top.show {
     opacity: 1 !important;
     visibility: visible !important;
-    pointer-events: auto;
+    pointer-events: auto !important;
 }
 
 .scroll-top:hover {
-    background: #ff8c61;
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(255, 107, 53, 0.6);
+    background: #ff8c61 !important;
+    transform: translateY(-5px) scale(1.1) !important;
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 1), 0 0 0 6px rgba(255, 107, 53, 0.3) !important;
+    animation: none !important;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.8), 0 0 0 4px rgba(255, 107, 53, 0.2);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(255, 107, 53, 1), 0 0 0 8px rgba(255, 107, 53, 0.4);
+    }
 }
 
 /* =====================================

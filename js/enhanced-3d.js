@@ -360,6 +360,12 @@
     // Smooth Page Transitions
     // =====================================
     function initPageTransitions() {
+        // Remove any existing overlay from previous navigation
+        const existingOverlay = document.querySelector('.page-transition-overlay');
+        if (existingOverlay) {
+            existingOverlay.remove();
+        }
+        
         // Add transition overlay
         const overlay = document.createElement('div');
         overlay.className = 'page-transition-overlay';
@@ -376,6 +382,11 @@
             transition: opacity 0.3s ease;
         `;
         document.body.appendChild(overlay);
+        
+        // Ensure overlay is hidden after page loads
+        setTimeout(() => {
+            overlay.style.opacity = '0';
+        }, 100);
         
         // Animate page entry
         document.body.style.opacity = '0';

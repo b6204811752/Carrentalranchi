@@ -1,4 +1,4 @@
-// =====================================
+﻿// =====================================
 // Navigation and Mobile Menu
 // =====================================
 // Performance Utilities: Debounce and Throttle
@@ -176,13 +176,13 @@ if (tripTypeSelect) {
 // Booking Form Submission - Google Form Integration with Hidden Iframe
 // =====================================
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🔧 Booking form script initializing...');
+    console.log('ðŸ”§ Booking form script initializing...');
     
     const bookingForm = document.getElementById('bookingForm');
-    console.log('📋 Booking form found:', bookingForm ? 'YES' : 'NO');
+    console.log('ðŸ“‹ Booking form found:', bookingForm ? 'YES' : 'NO');
 
     if (bookingForm) {
-        console.log('✅ Booking form handler attached');
+        console.log('âœ… Booking form handler attached');
         
         // Create hidden iframe for form submission (avoids CORS issues)
         let hiddenIframe = document.getElementById('hidden_iframe');
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hiddenIframe.id = 'hidden_iframe';
             hiddenIframe.style.display = 'none';
             document.body.appendChild(hiddenIframe);
-            console.log('📦 Hidden iframe created');
+            console.log('ðŸ“¦ Hidden iframe created');
         }
         
         // Track submission status
@@ -200,12 +200,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let isSubmitting = false;
         
         bookingForm.addEventListener('submit', (e) => {
-            console.log('🚀 Form submit event triggered');
+            console.log('ðŸš€ Form submit event triggered');
             e.preventDefault();
             e.stopPropagation();
             
             if (isSubmitting) {
-                console.log('⚠️ Already submitting, ignoring...');
+                console.log('âš ï¸ Already submitting, ignoring...');
                 return false;
             }
 
@@ -227,13 +227,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Validate mobile number
             if (!mobileNumber.match(/^[0-9]{10}$/)) {
-                alert('❌ Please enter a valid 10-digit mobile number');
+                alert('âŒ Please enter a valid 10-digit mobile number');
                 return;
             }
             
             // Validate required fields
             if (!tripType || !pickupLocation || !pickupDate || !pickupTime || !carType) {
-                alert('❌ Please fill all required fields');
+                alert('âŒ Please fill all required fields');
                 return;
             }
             
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     clearTimeout(submissionTimeout);
                     
                     // Show success popup
-                    alert('✅ SUCCESS!\n\nYour booking has been submitted successfully!\nWe will contact you soon on: ' + mobileNumber);
+                    alert('âœ… SUCCESS!\n\nYour booking has been submitted successfully!\nWe will contact you soon on: ' + mobileNumber);
                     
                     // Update button state
                     submitButton.innerHTML = '<i class="fas fa-check-circle"></i> Booking Submitted!';
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                     
                     // Create booking summary for WhatsApp
-                    let message = `🚖 NEW BOOKING\n\n`;
+                    let message = `ðŸš– NEW BOOKING\n\n`;
                     message += `Trip: ${tripTypeText}\n`;
                     message += `From: ${pickupLocation}\n`;
                     if (tripType !== 'local') {
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submissionTimeout = setTimeout(() => {
                 if (isSubmitting) {
                     // Show error popup
-                    alert('❌ SUBMISSION FAILED!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
+                    alert('âŒ SUBMISSION FAILED!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
                     
                     // Update button state
                     submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed - Try Again';
@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } catch (error) {
                 console.error('Form submission error:', error);
                 clearTimeout(submissionTimeout);
-                alert('❌ SUBMISSION ERROR!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
+                alert('âŒ SUBMISSION ERROR!\n\nThere was a problem submitting your booking.\n\nPlease try again or contact us directly via WhatsApp.');
                 
                 submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error - Try Again';
                 submitButton.style.backgroundColor = '#dc3545';
@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return false; // Prevent form submission
         });
     } else {
-        console.error('❌ Booking form not found!');
+        console.error('âŒ Booking form not found!');
     }
 });
 
@@ -839,7 +839,7 @@ if (calcBtn) {
         const carRate = document.getElementById('calcCar').value;
         
         if (!kmInput || !kmInput.value) {
-            alert('⚠️ Please enter distance in kilometers');
+            alert('âš ï¸ Please enter distance in kilometers');
             kmInput.focus();
             return;
         }
@@ -848,20 +848,20 @@ if (calcBtn) {
         
         // Validation
         if (km <= 0) {
-            alert('⚠️ Please enter a valid distance (greater than 0 km)');
+            alert('âš ï¸ Please enter a valid distance (greater than 0 km)');
             kmInput.focus();
             return;
         }
         
         if (km > 1000) {
-            alert('⚠️ Maximum distance is 1000 km. For longer trips, please contact us directly.');
+            alert('âš ï¸ Maximum distance is 1000 km. For longer trips, please contact us directly.');
             kmInput.focus();
             return;
         }
         
         const rate = parseFloat(carRate);
         
-        // Simple calculation: KM × Rate
+        // Simple calculation: KM Ã— Rate
         const totalFare = km * rate;
         
         // Get vehicle name for display
@@ -869,12 +869,12 @@ if (calcBtn) {
         const carName = carSelect.options[carSelect.selectedIndex].text;
         
         // Display result with animation
-        fareAmount.textContent = `₹${Math.round(totalFare).toLocaleString()}`;
+        fareAmount.textContent = `â‚¹${Math.round(totalFare).toLocaleString()}`;
         
         // Show calculation breakdown
         if (fareDetails) {
             fareDetails.innerHTML = `
-                <strong>Calculation:</strong> ${km} km × ₹${rate}/km = ₹${Math.round(totalFare).toLocaleString()}<br>
+                <strong>Calculation:</strong> ${km} km Ã— â‚¹${rate}/km = â‚¹${Math.round(totalFare).toLocaleString()}<br>
                 <strong>Vehicle:</strong> ${carName}
             `;
         }
@@ -885,7 +885,7 @@ if (calcBtn) {
         fareResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
         // Log for debugging
-        console.log(`Fare Calculated: ${km} km × ₹${rate}/km = ₹${Math.round(totalFare)}`);
+        console.log(`Fare Calculated: ${km} km Ã— â‚¹${rate}/km = â‚¹${Math.round(totalFare)}`);
     });
     
     // Allow Enter key to calculate
@@ -1004,7 +1004,7 @@ window.addEventListener('offline', () => {
 // =====================================
 // Console Welcome Message
 // =====================================
-console.log('%c🚗 Car Rental Ranchi', 'font-size: 20px; font-weight: bold; color: #ff6b35;');
+console.log('%cðŸš— Car Rental Ranchi', 'font-size: 20px; font-weight: bold; color: #ff6b35;');
 console.log('%cWelcome to our website! Need a taxi? Call us at +917488341848', 'font-size: 14px; color: #004e89;');
 
 // =====================================
@@ -1348,5 +1348,6 @@ function detectDevice() {
 
 window.addEventListener('load', detectDevice);
 
-console.log('%c✨ Enhanced UI/UX Features Loaded!', 'font-size: 14px; color: #4facfe; font-weight: bold;');
+console.log('%câœ¨ Enhanced UI/UX Features Loaded!', 'font-size: 14px; color: #4facfe; font-weight: bold;');
+
 

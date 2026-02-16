@@ -77,7 +77,10 @@
         }
     }, { passive: true });
 
-    // 5. Intersection Observer for animations
+    // 5. Intersection Observer for animations - DISABLED FOR CLS PREVENTION
+    // Animations are permanently disabled to prevent Cumulative Layout Shift
+    // This observer is commented out to avoid any potential layout shifts
+    /*
     if ('IntersectionObserver' in window) {
         const animateOnScroll = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -100,6 +103,8 @@
             animateOnScroll.observe(el);
         });
     }
+    */
+    console.log('🚫 Animations permanently disabled to prevent CLS');
 
     // 6. Network Information API - Reduce features on slow connections
     if ('connection' in navigator) {

@@ -106,7 +106,7 @@ List your business on these platforms with EXACT same information:
 Car Rental Ranchi
 [Your exact address]
 +917488341848
-Carrentalranchi01@gmail.com
+carrentalranchi02@gmail.com
 www.carrentalranchi.com
 ```
 

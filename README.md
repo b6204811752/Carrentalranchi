@@ -84,7 +84,7 @@ Place these images in the `images/` folder:
 #### Update Contact Information
 Search and replace these placeholders in `index.html`:
 - `+917488341848` - Your phone number
-- `Carrentalranchi01@gmail.com` - Your email
+- `carrentalranchi02@gmail.com` - Your email
 - Update business address in schema markup
 
 #### Google Analytics

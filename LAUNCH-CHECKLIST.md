@@ -4,7 +4,7 @@
 
 ### 1. Contact Information ✅
 - [ ] Verify phone number: **+917488341848**
-- [ ] Verify email: **Carrentalranchi01@gmail.com**
+- [ ] Verify email: **carrentalranchi02@gmail.com**
 - [ ] Update if needed in [index.html](index.html) (search for these numbers)
 
 ### 2. Google Analytics 📊

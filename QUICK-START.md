@@ -33,7 +33,7 @@ Open `index.html` and replace:
 Find and replace ALL instances of `+917488341848` with YOUR number
 
 **Email:**
-Find and replace `Carrentalranchi01@gmail.com` with YOUR email
+Find and replace `carrentalranchi02@gmail.com` with YOUR email
 
 **Address:**
 Update the address in:

@@ -208,8 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('⚠️ Already submitting, ignoring...');
                 return false;
             }
-            
-            console.log('▶️ Processing form submission...');
+
+            // Process form data
             
             // Get form values
             const tripType = document.getElementById('tripType').value;
@@ -281,22 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: 'entry.681528332', value: carTypeMapping[carType] || carType }
             ];
             
-            // DEBUG: Log all data being submitted
-            console.log('==========================================');
-            console.log('GOOGLE FORM SUBMISSION DEBUG');
-            console.log('==========================================');
-            console.log('Form URL:', googleFormURL);
-            console.log('Submission Data:');
-            fields.forEach(field => {
-                console.log(`  ${field.name} = "${field.value}"`);
-            });
-            console.log('==========================================');
-            
-            // Show alert with submission data for verification
-            const debugInfo = fields.map(f => `${f.name}: ${f.value}`).join('\n');
-            console.log('Full Debug Info:\n', debugInfo);
-            
-            fields.forEach(field => {
+            // Build form data
                 const input = document.createElement('input');
                 input.type = 'hidden';
                 input.name = field.name;

@@ -1,0 +1,36 @@
+/* =====================================
+   SCROLL BUTTON ICON FIX
+   Ensures icon is always visible
+   ===================================== */
+
+/* Make sure Font Awesome icon displays properly */
+.scroll-top i {
+    font-size: inherit !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    font-style: normal !important;
+}
+
+/* Fallback if Font Awesome doesn't load */
+.scroll-top::before {
+    content: '↑';
+    position: absolute;
+    font-size: 1.6rem;
+    color: #ffffff;
+    display: none;
+    font-family: Arial, sans-serif;
+    line-height: 56px;
+    font-weight: bold;
+}
+
+/* Show fallback only if icon not loaded */
+.scroll-top:not(:has(i))::before,
+.scroll-top i:empty::before {
+    display: block;
+}
+
+/* Ensure button content is centered */
+.scroll-top {
+    text-align: center !important;
+    line-height: 56px !important;
+}

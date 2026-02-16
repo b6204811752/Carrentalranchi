@@ -6699,7 +6699,10 @@ button:focus:not(:focus-visible) {
 .final-cta::before,
 .info-card:hover::before,
 .route-info-card:hover::before,
-.skeleton {
+.skeleton,
+.features-scroll,
+.hero-content,
+.live-chat-indicator {
     animation: none !important;
 }
 

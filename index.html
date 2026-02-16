@@ -97,25 +97,29 @@
     
     <!-- Critical CSS Inline for faster FCP -->
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}:root{--primary-color:#ff6b35;--secondary-color:#004e89;--dark-color:#1a1a2e;--white:#ffffff;--text-dark:#2d2d2d;--shadow-md:0 4px 6px rgba(0,0,0,0.1);--transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text-dark);background-color:var(--white);overflow-x:clip;margin:0;font-display:swap}.container{max-width:1200px;margin:0 auto;padding:0 20px}.top-bar{position:fixed;top:0;left:0;width:100%;background:var(--dark-color);color:var(--white);padding:10px 0;font-size:0.85rem;z-index:10003}.header{position:fixed;top:40px;left:0;width:100%;background:var(--white);box-shadow:var(--shadow-md);z-index:10002;transition:var(--transition)}.hero{position:relative;min-height:100vh;background:linear-gradient(135deg,rgba(0,78,137,0.95),rgba(255,107,53,0.85)),url('images/hero-bg-mobile.jpg') center/cover no-repeat;display:flex;align-items:center;padding-top:120px}.hero-content{color:var(--white)}.btn{display:inline-block;padding:14px 32px;font-size:1rem;font-weight:600;border:none;border-radius:50px;cursor:pointer;transition:var(--transition);text-transform:uppercase;min-height:48px}.btn-primary{background:var(--primary-color);color:var(--white)}.btn-primary:hover{background:#ff8c61}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}img[loading="lazy"]{aspect-ratio:4/3;background:#f0f0f0}.scroll-top{position:fixed!important;bottom:30px!important;left:30px!important;width:56px!important;height:56px!important;background:#ff6b35!important;border:none!important;border-radius:50%!important;cursor:pointer!important;opacity:0;visibility:hidden;transform:translateY(100px);z-index:100000!important;display:flex!important;align-items:center!important;justify-content:center!important;pointer-events:none;transition:all .4s cubic-bezier(.4,0,.2,1)!important}.scroll-top.show{opacity:1!important;visibility:visible!important;transform:translateY(0)!important;pointer-events:auto!important}.scroll-top svg{width:24px;height:24px;stroke:#fff;pointer-events:none}@media(min-width:769px){.hero{background-image:linear-gradient(135deg,rgba(0,78,137,0.95),rgba(255,107,53,0.85)),url('images/hero-bg-desktop.jpg')}}
+        *{margin:0;padding:0;box-sizing:border-box}:root{--primary-color:#ff6b35;--secondary-color:#004e89;--dark-color:#1a1a2e;--white:#ffffff;--text-dark:#2d2d2d;--shadow-md:0 4px 6px rgba(0,0,0,0.1);--transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text-dark);background-color:var(--white);overflow-x:clip;margin:0;font-display:swap}.container{max-width:1200px;margin:0 auto;padding:0 20px}.top-bar{position:fixed;top:0;left:0;width:100%;background:var(--dark-color);color:var(--white);padding:10px 0;font-size:0.85rem;z-index:10003}.header{position:fixed;top:40px;left:0;width:100%;background:var(--white);box-shadow:var(--shadow-md);z-index:10002;transition:var(--transition)}.hero{position:relative;min-height:100vh;background:linear-gradient(135deg,rgba(0,78,137,0.95),rgba(255,107,53,0.85)),url('images/hero-bg-mobile.webp') center/cover no-repeat;display:flex;align-items:center;padding-top:120px}.hero-content{color:var(--white)}.btn{display:inline-block;padding:14px 32px;font-size:1rem;font-weight:600;border:none;border-radius:50px;cursor:pointer;transition:var(--transition);text-transform:uppercase;min-height:48px}.btn-primary{background:var(--primary-color);color:var(--white)}.btn-primary:hover{background:#ff8c61}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}img[loading="lazy"]{aspect-ratio:4/3;background:#f0f0f0}.scroll-top{position:fixed!important;bottom:30px!important;left:30px!important;width:56px!important;height:56px!important;background:#ff6b35!important;border:none!important;border-radius:50%!important;cursor:pointer!important;opacity:0;visibility:hidden;transform:translateY(100px);z-index:100000!important;display:flex!important;align-items:center!important;justify-content:center!important;pointer-events:none;transition:all .4s cubic-bezier(.4,0,.2,1)!important}.scroll-top.show{opacity:1!important;visibility:visible!important;transform:translateY(0)!important;pointer-events:auto!important}.scroll-top svg{width:24px;height:24px;stroke:#fff;pointer-events:none}@media(min-width:769px){.hero{background-image:linear-gradient(135deg,rgba(0,78,137,0.95),rgba(255,107,53,0.85)),url('images/hero-bg-desktop.webp')}}
     </style>
     
     <!-- Preload Critical Resources for LCP & FCP -->
-    <link rel="preload" href="images/hero-bg-desktop.jpg" as="image" media="(min-width: 769px)" fetchpriority="high">
-    <link rel="preload" href="images/hero-bg-mobile.jpg" as="image" media="(max-width: 768px)" fetchpriority="high">
-    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="images/hero-bg-desktop.webp" as="image" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" href="images/hero-bg-mobile.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
     
     <!-- Stylesheets - Single render-blocking CSS for best FCP -->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all';this.onload=null" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- Google tag (gtag.js) - Loaded async -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4DWJ25X4R"></script>
+    <!-- Google tag (gtag.js) - Deferred until after page load -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-C4DWJ25X4R');
+        window.addEventListener('load', function() {
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C4DWJ25X4R';
+            s.async = true;
+            document.head.appendChild(s);
+        });
     </script>
     <!-- Schema Markup for Local Business - Enhanced -->
     <script type="application/ld+json">
@@ -660,7 +664,7 @@
                 <div class="nav-wrapper">
                     <div class="logo">
                         <a href="/">
-                            <img src="images/carrentalranchilog.jpeg" alt="Car Rental Ranchi Logo" class="logo-img" width="60" height="60" loading="eager" fetchpriority="high">
+                            <img src="images/carrentalranchilog.webp" alt="Car Rental Ranchi Logo" class="logo-img" width="60" height="60" loading="eager" fetchpriority="high">
                             <div class="logo-text">
                                 <h1>Car Rental Ranchi</h1>
                                 <p class="tagline">Ranchi's #1 Taxi Service Since 2015</p>
@@ -936,7 +940,7 @@
                 <!-- Local Taxi Service -->
                 <div class="service-card">
                     <div class="service-card-img-wrapper">
-                        <img src="images/services/local taxi.jpg" alt="Local Taxi Service in Ranchi City" class="service-card-image" loading="lazy" width="400" height="300">
+                        <img src="images/services/local taxi.webp" alt="Local Taxi Service in Ranchi City" class="service-card-image" loading="lazy" width="400" height="300">
                         <div class="service-card-overlay">
                             <span class="service-card-tag"><i class="fas fa-city"></i> City Ride</span>
                         </div>
@@ -963,7 +967,7 @@
                 <div class="service-card featured">
                     <div class="service-card-img-wrapper">
                         <div class="badge">Most Popular</div>
-                        <img src="images/services/outstation taxi.jpg" alt="Outstation Taxi from Ranchi to Patna Kolkata" class="service-card-image" loading="lazy" width="400" height="300">
+                        <img src="images/services/outstation taxi.webp" alt="Outstation Taxi from Ranchi to Patna Kolkata" class="service-card-image" loading="lazy" width="400" height="300">
                         <div class="service-card-overlay">
                             <span class="service-card-tag"><i class="fas fa-route"></i> Outstation</span>
                         </div>
@@ -1106,7 +1110,7 @@
             <div class="fleet-grid">
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <img src="images/dezire.jpg" alt="Swift Dzire Taxi in Ranchi" width="400" height="300" loading="lazy">
+                        <img src="images/dezire.webp" alt="Swift Dzire Taxi in Ranchi" width="400" height="300" loading="lazy">
                         <div class="fleet-badge">Most Booked</div>
                     </div>
                     <div class="fleet-info">
@@ -1145,7 +1149,7 @@
                 </div>
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <img src="images/crista.jpeg" alt="Innova Crysta Taxi in Ranchi" width="400" height="300" loading="lazy">
+                        <img src="images/crista.webp" alt="Innova Crysta Taxi in Ranchi" width="400" height="300" loading="lazy">
                         <div class="fleet-badge premium">Premium</div>
                     </div>
                     <div class="fleet-info">
@@ -1165,7 +1169,7 @@
                 </div>
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <img src="images/aura.jpg" alt="Hyundai Aura Taxi in Ranchi" width="400" height="300" loading="lazy">
+                        <img src="images/aura.webp" alt="Hyundai Aura Taxi in Ranchi" width="400" height="300" loading="lazy">
                     </div>
                     <div class="fleet-info">
                         <h3>Hyundai Aura</h3>
@@ -1184,7 +1188,7 @@
                 </div>
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <img src="images/bmw.jpg" alt="BMW Luxury Car Rental in Ranchi" width="400" height="300" loading="lazy">
+                        <img src="images/bmw.webp" alt="BMW Luxury Car Rental in Ranchi" width="400" height="300" loading="lazy">
                         <div class="fleet-badge premium">Luxury</div>
                     </div>
                     <div class="fleet-info">
@@ -1204,7 +1208,7 @@
                 </div>
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <img src="images/audi.jpg" alt="Audi Luxury Car Rental in Ranchi" width="400" height="300" loading="lazy">
+                        <img src="images/audi.webp" alt="Audi Luxury Car Rental in Ranchi" width="400" height="300" loading="lazy">
                         <div class="fleet-badge premium">Luxury</div>
                     </div>
                     <div class="fleet-info">
@@ -2123,7 +2127,7 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <div class="footer-brand">
-                        <img src="images/carrentalranchilog.jpeg" alt="Car Rental Ranchi Logo" class="footer-logo" width="80" height="80" loading="lazy">
+                        <img src="images/carrentalranchilog.webp" alt="Car Rental Ranchi Logo" class="footer-logo" width="80" height="80" loading="lazy">
                         <h3>Car Rental Ranchi</h3>
                     </div>
                     <p>Your trusted taxi and car rental partner in Ranchi for local, outstation, airport transfers, and tour packages. We are committed to providing safe, comfortable, and affordable transportation solutions.</p>

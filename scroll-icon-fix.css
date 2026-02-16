@@ -9,28 +9,34 @@
     line-height: 1 !important;
     display: inline-block !important;
     font-style: normal !important;
+    width: 1em !important;
+    text-align: center !important;
 }
 
-/* Fallback if Font Awesome doesn't load */
-.scroll-top::before {
+/* Unicode fallback arrow - always visible */
+.scroll-top::after {
     content: '↑';
     position: absolute;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #ffffff;
-    display: none;
     font-family: Arial, sans-serif;
     line-height: 56px;
     font-weight: bold;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-/* Show fallback only if icon not loaded */
-.scroll-top:not(:has(i))::before,
-.scroll-top i:empty::before {
-    display: block;
+/* Hide fallback when Font Awesome loads */
+.scroll-top i.fas::before {
+    position: relative;
+    z-index: 2;
 }
 
 /* Ensure button content is centered */
 .scroll-top {
     text-align: center !important;
     line-height: 56px !important;
+    position: relative !important;
 }

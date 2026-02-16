@@ -282,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ];
             
             // Build form data
+            fields.forEach((field) => {
                 const input = document.createElement('input');
                 input.type = 'hidden';
                 input.name = field.name;
@@ -312,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                     
                     // Create booking summary for WhatsApp
-                    let message = `ðŸš– NEW BOOKING\n\n`;
+                    let message = `NEW BOOKING\n\n`;
                     message += `Trip: ${tripTypeText}\n`;
                     message += `From: ${pickupLocation}\n`;
                     if (tripType !== 'local') {

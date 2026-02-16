@@ -1936,3 +1936,41 @@ html {
         scroll-behavior: auto;
     }
 }
+
+/* =====================================
+   CLS PREVENTION - Disable all infinite animations
+   These cause Cumulative Layout Shift
+   ===================================== */
+.hero,
+.hero::after,
+.hero .container::before,
+.hero .container::after,
+.hero-title,
+.hero-subtitle,
+.fare-card.featured,
+.service-card::before,
+.booking-form-card::before,
+.service-icon,
+.service-icon::after,
+.why-card-city:hover i,
+.stats-section,
+.stat-card i,
+.section-header h2::after,
+.btn-submit,
+.social-proof-banner,
+.fleet-badge.premium,
+.about-badge,
+.contact-info,
+.cta-section-city,
+.cta-section-city::before,
+.city-hero::before,
+.city-hero-title,
+.place-number,
+.footer::before,
+.whatsapp-float,
+.float-btn,
+.float-btn::after,
+.scroll-progress-bar,
+.skeleton-loader {
+    animation: none !important;
+}

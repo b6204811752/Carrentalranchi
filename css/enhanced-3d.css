@@ -134,6 +134,9 @@
     animation: gradientShift 15s ease infinite;
     position: relative;
     overflow: hidden;
+    will-change: background-position;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .hero::after {
@@ -148,6 +151,9 @@
     animation: floatSlow 20s ease-in-out infinite;
     pointer-events: none;
     z-index: 1;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* Geometric Shapes Floating in Hero */
@@ -163,6 +169,9 @@
     animation: morphBlob 8s ease-in-out infinite, float 6s ease-in-out infinite;
     z-index: 1;
     pointer-events: none;
+    will-change: transform, border-radius;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .hero .container::after {
@@ -177,6 +186,9 @@
     animation: float 8s ease-in-out infinite reverse;
     z-index: 1;
     pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .hero-title {
@@ -186,10 +198,14 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: shimmer 4s linear infinite;
+    will-change: background-position;
+    transform: translateZ(0);
 }
 
 .hero-subtitle {
     animation: textGlow 3s ease-in-out infinite;
+    will-change: text-shadow;
+    transform: translateZ(0);
 }
 
 /* =====================================

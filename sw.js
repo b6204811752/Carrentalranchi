@@ -1,11 +1,11 @@
 // Service Worker for Car Rental Ranchi
-// Version 1.5.0 - Progressive Web App - Optimized February 16, 2026
-// FIX: Disabled page transitions completely to eliminate gradient overlay bug
+// Version 2.0.0 - Performance Optimized - February 16, 2026
+// Enhanced caching for Lighthouse 100/100 Performance
 
-const CACHE_NAME = 'car-rental-ranchi-v6';
-const STATIC_CACHE = 'static-v6';
-const DYNAMIC_CACHE = 'dynamic-v6';
-const IMAGE_CACHE = 'images-v6';
+const CACHE_NAME = 'car-rental-ranchi-v7-perf';
+const STATIC_CACHE = 'static-v7';
+const DYNAMIC_CACHE = 'dynamic-v7';
+const IMAGE_CACHE = 'images-v7';
 
 const urlsToCache = [
     '/',

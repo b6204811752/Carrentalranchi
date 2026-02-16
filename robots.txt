@@ -1,5 +1,5 @@
 # Robots.txt for Car Rental Ranchi
-# www.carrentalranchi.com
+# www.b6204811752.github.io
 
 # Allow all search engines
 User-agent: *
@@ -59,8 +59,8 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://www.carrentalranchi.com/sitemap.xml
-Sitemap: https://carrentalranchi.com/sitemap.xml
+Sitemap: https://www.b6204811752.github.io/sitemap.xml
+Sitemap: https://b6204811752.github.io/sitemap.xml
 
 # Crawl-delay for respectful crawling (general)
 Crawl-delay: 1

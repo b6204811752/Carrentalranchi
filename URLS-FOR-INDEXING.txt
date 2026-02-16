@@ -2,62 +2,62 @@
 COMPLETE URL LIST FOR GOOGLE SEARCH CONSOLE INDEXING
 ==============================================================
 Total URLs: 38 Production Pages
-Domain: https://carrentalranchi.com
+Domain: https://b6204811752.github.io
 Date: February 15, 2026
 ==============================================================
 
 ⭐ PRIORITY 1 - HOMEPAGE (Index First)
 ==============================================================
-1. https://carrentalranchi.com/
+1. https://b6204811752.github.io/
 
 ==============================================================
 🚗 PRIORITY 2 - SERVICE PAGES (7 URLs)
 ==============================================================
-2. https://carrentalranchi.com/ranchi-airport-taxi.html
-3. https://carrentalranchi.com/ranchi-railway-station-taxi.html
-4. https://carrentalranchi.com/ranchi-local-taxi.html
-5. https://carrentalranchi.com/ranchi-local-sightseeing.html
-6. https://carrentalranchi.com/corporate-taxi-ranchi.html
-7. https://carrentalranchi.com/wedding-car-rental-ranchi.html
-8. https://carrentalranchi.com/one-day-tour-ranchi.html
+2. https://b6204811752.github.io/ranchi-airport-taxi.html
+3. https://b6204811752.github.io/ranchi-railway-station-taxi.html
+4. https://b6204811752.github.io/ranchi-local-taxi.html
+5. https://b6204811752.github.io/ranchi-local-sightseeing.html
+6. https://b6204811752.github.io/corporate-taxi-ranchi.html
+7. https://b6204811752.github.io/wedding-car-rental-ranchi.html
+8. https://b6204811752.github.io/one-day-tour-ranchi.html
 
 ==============================================================
 🛣️ PRIORITY 3 - MAJOR ROUTE PAGES (10 URLs)
 ==============================================================
-9. https://carrentalranchi.com/ranchi-to-jamshedpur-taxi.html
-10. https://carrentalranchi.com/ranchi-to-patna-taxi.html
-11. https://carrentalranchi.com/ranchi-to-kolkata-taxi.html
-12. https://carrentalranchi.com/ranchi-to-bokaro-taxi.html
-13. https://carrentalranchi.com/ranchi-to-dhanbad-taxi.html
-14. https://carrentalranchi.com/ranchi-to-gaya-taxi.html
-15. https://carrentalranchi.com/ranchi-to-deoghar-taxi.html
-16. https://carrentalranchi.com/ranchi-to-varanasi-taxi.html
-17. https://carrentalranchi.com/ranchi-to-bodh-gaya-taxi.html
-18. https://carrentalranchi.com/ranchi-to-darjeeling-taxi.html
+9. https://b6204811752.github.io/ranchi-to-jamshedpur-taxi.html
+10. https://b6204811752.github.io/ranchi-to-patna-taxi.html
+11. https://b6204811752.github.io/ranchi-to-kolkata-taxi.html
+12. https://b6204811752.github.io/ranchi-to-bokaro-taxi.html
+13. https://b6204811752.github.io/ranchi-to-dhanbad-taxi.html
+14. https://b6204811752.github.io/ranchi-to-gaya-taxi.html
+15. https://b6204811752.github.io/ranchi-to-deoghar-taxi.html
+16. https://b6204811752.github.io/ranchi-to-varanasi-taxi.html
+17. https://b6204811752.github.io/ranchi-to-bodh-gaya-taxi.html
+18. https://b6204811752.github.io/ranchi-to-darjeeling-taxi.html
 
 ==============================================================
 🏔️ PRIORITY 4 - TOURIST & OTHER ROUTE PAGES (20 URLs)
 ==============================================================
-19. https://carrentalranchi.com/ranchi-to-netarhat-taxi.html
-20. https://carrentalranchi.com/ranchi-to-betla-national-park-taxi.html
-21. https://carrentalranchi.com/ranchi-to-hundru-falls-taxi.html
-22. https://carrentalranchi.com/ranchi-to-jonha-falls-taxi.html
-23. https://carrentalranchi.com/ranchi-to-rajrappa-temple-taxi.html
-24. https://carrentalranchi.com/ranchi-to-parasnath-taxi.html
-25. https://carrentalranchi.com/ranchi-to-siliguri-taxi.html
-26. https://carrentalranchi.com/ranchi-to-digha-taxi.html
-27. https://carrentalranchi.com/ranchi-to-durgapur-taxi.html
-28. https://carrentalranchi.com/ranchi-to-asansol-taxi.html
-29. https://carrentalranchi.com/ranchi-to-hazaribagh-taxi.html
-30. https://carrentalranchi.com/ranchi-to-giridih-taxi.html
-31. https://carrentalranchi.com/ranchi-to-dumka-taxi.html
-32. https://carrentalranchi.com/ranchi-to-ramgarh-taxi.html
-33. https://carrentalranchi.com/ranchi-to-chaibasa-taxi.html
-34. https://carrentalranchi.com/ranchi-to-khunti-taxi.html
-35. https://carrentalranchi.com/ranchi-to-gumla-taxi.html
-36. https://carrentalranchi.com/ranchi-to-lohardaga-taxi.html
-37. https://carrentalranchi.com/ranchi-to-simdega-taxi.html
-38. https://carrentalranchi.com/ranchi-to-purulia-taxi.html
+19. https://b6204811752.github.io/ranchi-to-netarhat-taxi.html
+20. https://b6204811752.github.io/ranchi-to-betla-national-park-taxi.html
+21. https://b6204811752.github.io/ranchi-to-hundru-falls-taxi.html
+22. https://b6204811752.github.io/ranchi-to-jonha-falls-taxi.html
+23. https://b6204811752.github.io/ranchi-to-rajrappa-temple-taxi.html
+24. https://b6204811752.github.io/ranchi-to-parasnath-taxi.html
+25. https://b6204811752.github.io/ranchi-to-siliguri-taxi.html
+26. https://b6204811752.github.io/ranchi-to-digha-taxi.html
+27. https://b6204811752.github.io/ranchi-to-durgapur-taxi.html
+28. https://b6204811752.github.io/ranchi-to-asansol-taxi.html
+29. https://b6204811752.github.io/ranchi-to-hazaribagh-taxi.html
+30. https://b6204811752.github.io/ranchi-to-giridih-taxi.html
+31. https://b6204811752.github.io/ranchi-to-dumka-taxi.html
+32. https://b6204811752.github.io/ranchi-to-ramgarh-taxi.html
+33. https://b6204811752.github.io/ranchi-to-chaibasa-taxi.html
+34. https://b6204811752.github.io/ranchi-to-khunti-taxi.html
+35. https://b6204811752.github.io/ranchi-to-gumla-taxi.html
+36. https://b6204811752.github.io/ranchi-to-lohardaga-taxi.html
+37. https://b6204811752.github.io/ranchi-to-simdega-taxi.html
+38. https://b6204811752.github.io/ranchi-to-purulia-taxi.html
 
 ==============================================================
 📝 NOTES
@@ -88,7 +88,7 @@ METHOD 2: Bulk URL Submission via Sitemap
 1. Ensure sitemap.xml includes all URLs
 2. Go to: https://search.google.com/search-console
 3. Click "Sitemaps" in left sidebar
-4. Submit: https://carrentalranchi.com/sitemap.xml
+4. Submit: https://b6204811752.github.io/sitemap.xml
 5. Google will crawl all URLs automatically
 
 METHOD 3: IndexNow API (Instant Indexing)

@@ -167,7 +167,7 @@ self.addEventListener('notificationclick', (event) => {
     
     if (event.action === 'book') {
         event.waitUntil(
-            clients.openWindow('https://www.carrentalranchi.com/#booking')
+            clients.openWindow('https://b6204811752.github.io/#booking')
         );
     }
 });

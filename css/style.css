@@ -6646,6 +6646,8 @@ button:focus:not(:focus-visible) {
 .whatsapp-badge,
 .live-dot,
 .floating-btn,
+.whatsapp-float,
+.call-float,
 .proof-icon.live-pulse,
 .car-type-badge,
 .section-title::after,

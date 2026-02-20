@@ -447,6 +447,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": "https://carrentalranchi.com/#website",
         "name": "Car Rental Ranchi",
         "url": "https://carrentalranchi.com",
         "potentialAction": {
@@ -457,17 +458,26 @@
     }
     </script>
     
-    <!-- Speakable Schema for Voice Search -->
+    <!-- WebPage Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Car Rental Ranchi - Best Taxi Service",
-        "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": ["#services", "#pricing", "#contact"]
+        "@id": "https://carrentalranchi.com/#webpage",
+        "name": "Car Rental Ranchi - Best Taxi Service in Ranchi, Jharkhand",
+        "description": "Professional car rental and taxi service in Ranchi. Book local taxi, outstation cabs, airport transfers. 24/7 service with verified drivers since 2015.",
+        "url": "https://carrentalranchi.com",
+        "inLanguage": "en-IN",
+        "isPartOf": {
+            "@id": "https://carrentalranchi.com/#website"
         },
-        "url": "https://carrentalranchi.com"
+        "about": {
+            "@id": "https://carrentalranchi.com/#organization"
+        },
+        "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://carrentalranchi.com/images/logo-original.webp"
+        }
     }
     </script>
     
@@ -547,63 +557,79 @@
     }
     </script>
     
-    <!-- PriceSpecification Schema for Competitive Pricing -->
+    <!-- ItemList Schema for Pricing -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Car Rental Ranchi Pricing",
         "description": "Transparent pricing for taxi services in Ranchi - Local, Airport, and Outstation",
+        "numberOfItems": 5,
         "itemListElement": [
             {
-                "@type": "Offer",
+                "@type": "ListItem",
                 "position": 1,
-                "name": "Local Taxi Ranchi - 4 Hours Package",
-                "price": "800",
-                "priceCurrency": "INR",
-                "description": "4 hours / 40 km within Ranchi city",
-                "availability": "https://schema.org/InStock",
-                "url": "https://carrentalranchi.com/ranchi-local-taxi.html"
+                "item": {
+                    "@type": "Offer",
+                    "name": "Local Taxi Ranchi - 4 Hours Package",
+                    "price": "800",
+                    "priceCurrency": "INR",
+                    "description": "4 hours / 40 km within Ranchi city",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://carrentalranchi.com/ranchi-local-taxi.html"
+                }
             },
             {
-                "@type": "Offer",
+                "@type": "ListItem",
                 "position": 2,
-                "name": "Ranchi Airport Taxi",
-                "price": "500",
-                "priceCurrency": "INR",
-                "description": "Birsa Munda Airport pickup/drop within city",
-                "availability": "https://schema.org/InStock",
-                "url": "https://carrentalranchi.com/ranchi-airport-taxi.html"
+                "item": {
+                    "@type": "Offer",
+                    "name": "Ranchi Airport Taxi",
+                    "price": "500",
+                    "priceCurrency": "INR",
+                    "description": "Birsa Munda Airport pickup/drop within city",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://carrentalranchi.com/ranchi-airport-taxi.html"
+                }
             },
             {
-                "@type": "Offer",
+                "@type": "ListItem",
                 "position": 3,
-                "name": "Ranchi to Patna Taxi",
-                "price": "3500",
-                "priceCurrency": "INR",
-                "description": "330 km one-way taxi service",
-                "availability": "https://schema.org/InStock",
-                "url": "https://carrentalranchi.com/ranchi-to-patna-taxi.html"
+                "item": {
+                    "@type": "Offer",
+                    "name": "Ranchi to Patna Taxi",
+                    "price": "3500",
+                    "priceCurrency": "INR",
+                    "description": "330 km one-way taxi service",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://carrentalranchi.com/ranchi-to-patna-taxi.html"
+                }
             },
             {
-                "@type": "Offer",
+                "@type": "ListItem",
                 "position": 4,
-                "name": "Ranchi to Kolkata Taxi",
-                "price": "5500",
-                "priceCurrency": "INR",
-                "description": "420 km one-way taxi service",
-                "availability": "https://schema.org/InStock",
-                "url": "https://carrentalranchi.com/ranchi-to-kolkata-taxi.html"
+                "item": {
+                    "@type": "Offer",
+                    "name": "Ranchi to Kolkata Taxi",
+                    "price": "5500",
+                    "priceCurrency": "INR",
+                    "description": "420 km one-way taxi service",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://carrentalranchi.com/ranchi-to-kolkata-taxi.html"
+                }
             },
             {
-                "@type": "Offer",
+                "@type": "ListItem",
                 "position": 5,
-                "name": "Ranchi to Jamshedpur Taxi",
-                "price": "1560",
-                "priceCurrency": "INR",
-                "description": "140 km one-way taxi service",
-                "availability": "https://schema.org/InStock",
-                "url": "https://carrentalranchi.com/ranchi-to-jamshedpur-taxi.html"
+                "item": {
+                    "@type": "Offer",
+                    "name": "Ranchi to Jamshedpur Taxi",
+                    "price": "1560",
+                    "priceCurrency": "INR",
+                    "description": "140 km one-way taxi service",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://carrentalranchi.com/ranchi-to-jamshedpur-taxi.html"
+                }
             }
         ]
     }

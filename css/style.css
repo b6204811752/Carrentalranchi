@@ -243,13 +243,14 @@ p {
 }
 
 .btn-call {
-    background: #FF6B35;
+    background: #e85a28;
     color: var(--white);
     box-shadow: var(--shadow-md);
+    /* Improved contrast for accessibility */
 }
 
 .btn-call:hover {
-    background: #e85a28;
+    background: #d94d1a;
     transform: translateY(-2px);
 }
 
@@ -1556,7 +1557,8 @@ tbody td:last-child {
 .route-price {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: #d94d1a;
+    /* Improved contrast from #ff6b35 to #d94d1a for better accessibility */
 }
 
 .tariff-note {
@@ -1947,14 +1949,17 @@ tbody td:last-child {
 }
 
 .social-links a {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    /* Improve touch target */
+    min-width: 48px;
+    min-height: 48px;
 }
 
 .social-links a:hover {

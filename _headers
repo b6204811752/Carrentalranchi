@@ -6,7 +6,6 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(self), microphone=(), camera=()
   Cross-Origin-Opener-Policy: same-origin-allow-popups
-  Cross-Origin-Embedder-Policy: require-corp
 
 # HTML - Short cache
 /*.html

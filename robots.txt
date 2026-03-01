@@ -59,7 +59,7 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://carrentalranchi.com/sitemap.xml
+Sitemap: https://www.carrentalranchi.com/sitemap.xml
 
 # Crawl-delay for respectful crawling (general)
 Crawl-delay: 1

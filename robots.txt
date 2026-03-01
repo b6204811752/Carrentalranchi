@@ -8,14 +8,8 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Google - no crawl delay needed
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
 # Google Image Bot
 User-agent: Googlebot-Image
-Allow: /
 Allow: /images/
 
 # Bing

@@ -396,9 +396,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             return false; // Prevent form submission
         });
-    } else {
-        console.error('❌ Booking form not found!');
     }
+    // bookingForm only exists on homepage — no error needed on route/service pages
 });
 
 // =====================================

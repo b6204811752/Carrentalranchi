@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -18,43 +18,43 @@
     
     <!-- Main Service Pages -->
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-local-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-local-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-airport-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-airport-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-railway-station-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-railway-station-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/corporate-taxi-ranchi.html</loc>
+        <loc>https://www.carrentalranchi.com/corporate-taxi-ranchi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/wedding-car-rental-ranchi.html</loc>
+        <loc>https://www.carrentalranchi.com/wedding-car-rental-ranchi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/one-day-tour-ranchi.html</loc>
+        <loc>https://www.carrentalranchi.com/one-day-tour-ranchi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-local-sightseeing.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-local-sightseeing</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -62,31 +62,31 @@
     
     <!-- Top Outstation Routes -->
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-patna-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-patna-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-kolkata-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-kolkata-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-jamshedpur-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-jamshedpur-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-bokaro-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-bokaro-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-dhanbad-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-dhanbad-taxi</loc>
         <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -94,61 +94,61 @@
     
     <!-- Jharkhand Cities -->
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-hazaribagh-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-hazaribagh-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-deoghar-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-deoghar-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-giridih-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-giridih-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-dumka-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-dumka-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-ramgarh-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-ramgarh-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-chaibasa-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-chaibasa-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-khunti-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-khunti-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-gumla-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-gumla-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-lohardaga-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-lohardaga-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-simdega-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-simdega-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -156,13 +156,13 @@
     
     <!-- Bihar Cities -->
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-gaya-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-gaya-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-bodh-gaya-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-bodh-gaya-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -170,37 +170,37 @@
     
     <!-- West Bengal Cities -->
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-asansol-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-asansol-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-durgapur-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-durgapur-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-purulia-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-purulia-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-siliguri-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-siliguri-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-darjeeling-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-darjeeling-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-digha-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-digha-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
@@ -208,43 +208,43 @@
     
     <!-- Tourist Destinations -->
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-netarhat-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-netarhat-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-betla-national-park-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-betla-national-park-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-hundru-falls-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-hundru-falls-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-jonha-falls-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-jonha-falls-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-rajrappa-temple-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-rajrappa-temple-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-parasnath-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-parasnath-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://www.carrentalranchi.com/ranchi-to-varanasi-taxi.html</loc>
+        <loc>https://www.carrentalranchi.com/ranchi-to-varanasi-taxi</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

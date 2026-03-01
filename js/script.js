@@ -457,7 +457,7 @@ const animateCounters = () => {
 
 // Intersection Observer for counter animation
 const observerOptions = {
-    threshold: 0.5,
+    threshold: 0.1,
     rootMargin: '0px'
 };
 

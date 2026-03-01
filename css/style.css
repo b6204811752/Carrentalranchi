@@ -1766,9 +1766,11 @@ tbody td:last-child {
     object-fit: cover;
 }
 
-.testimonial-author h4 {
+.testimonial-name {
     margin: 0;
     font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-color);
 }
 
 .testimonial-author span {

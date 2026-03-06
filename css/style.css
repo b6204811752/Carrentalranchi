@@ -352,7 +352,8 @@ p {
     gap: 3px;
 }
 
-.logo h1 {
+.logo h1,
+.logo .brand-name {
     font-size: 1.6rem;
     color: #c94b10;
     margin: 0;

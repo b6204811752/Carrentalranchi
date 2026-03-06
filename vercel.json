@@ -8,6 +8,40 @@
   ],
   "headers": [
     {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "max-age=60"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "max-age=60"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {

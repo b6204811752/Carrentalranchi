@@ -4,28 +4,9 @@
 # Allow all search engines full access
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-
-# Google Image Bot
-User-agent: Googlebot-Image
+Allow: /css/
+Allow: /js/
 Allow: /images/
-
-# Bing
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Yandex
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
-
-# Yahoo Slurp
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
 
 # Block pure scrapers / link spammers
 User-agent: MJ12bot
@@ -34,5 +15,11 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Sitemap location
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location (must be absolute URL)
 Sitemap: https://www.carrentalranchi.com/sitemap.xml
